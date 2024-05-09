@@ -1,0 +1,163 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'VT323', monospace;
+}
+
+body,
+.snake {
+  background-color: #414141;
+}
+
+#game-board {
+  border-radius: 100px;
+  display: grid;
+  grid-template-columns: repeat(20, 20px);
+  grid-template-rows: repeat(20, 20px);
+  margin: 5px;
+}
+
+.game-border-1 {
+  border: #595f43 solid 10px;
+  border-radius: 30px;
+  box-shadow: inset 0 0 0 10px #595f43;
+}
+
+.game-border-2 {
+  border: #c40000 solid 8px;
+  border-radius: 26px;
+  box-shadow: inset 0 0 0 10px #abb78a;
+}
+
+.game-border-3 {
+  border: #c40000 solid 30px;
+  border-radius: 20px;
+  box-shadow: inset 0 0 0 5px #8b966c;
+}
+
+#instruction-text {
+  position: absolute;
+  top: 65%;
+  color: #FFFF00;
+  width: 300px;
+  text-align: center;
+  text-transform: capitalize;
+  padding: 30px;
+  margin: 0;
+}
+
+.scores {
+  display: flex;
+  justify-content: space-between;
+}
+
+#score {
+  color: #abb78a;
+}
+
+#score,
+#highScore {
+  font-size: 40px;
+  font-weight: bolder;
+  margin: 10px 0;
+}
+
+#highScore {
+  color: #d8ddca;
+  display: none;
+}
+
+.game-border-3,
+.logo {
+  background-color: #ff01013d;
+}
+
+#logo {
+  position: absolute;
+  transform: scale(0.08);
+}
+
+
+.snake {
+  border: #abb78a 1px dotted;
+  background-color: #ffff00;
+}
+
+.snake-head {
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  background-color: #FFFF00;
+}
+
+.food {
+  box-sizing: border-box;
+  width: 40px;
+  height: 40px;
+  margin: -1px;
+  background-image: url('material/jet-fighter-image.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: #595f43 5px;
+}
+
+
+#endscreen-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+#endscreen-popup h2 {
+  margin-bottom: 10px;
+}
+
+#endscreen-popup button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* .explosion {
+  box-sizing: border-box;
+  width: 40px;
+  height: 40px;
+  margin: -1px;
+  background-image: url('/material/explosion.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: #595f43 5px;
+  animation: explosion 1s linear;
+}
+
+@keyframes explosion {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+} */
